@@ -3,8 +3,8 @@ plugins {
     id 'war'
 }
 
-group 'org.example'
-version '1.0-SNAPSHOT'
+group = 'org.example'
+version = '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
@@ -14,8 +14,10 @@ ext {
     junitVersion = '5.13.2'
 }
 
-sourceCompatibility = '25'
-targetCompatibility = '25'
+java {
+    sourceCompatibility = JavaVersion.VERSION_25
+    targetCompatibility = JavaVersion.VERSION_25
+}
 
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
